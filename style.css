@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #2C82C9;
+    --winning-blocks: #2d414b;
+    --bg-color: #25373D;
+    --box-bg-color: #192f36;
+    --shadow: rgba(44, 130, 201, .4) 0px 4px 10px 2px;
+}
+
+body {
+    color: var(--main-color);
+    font-family: 'Finger Paint', cursive;
+}
+
+h1 {
+    font-size: 62px;
+    border-radius: 12px;
+    padding: 10px 53.5px;
+    box-shadow: var(--shadow);
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-color);
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#board {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    transition: all 2s;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    background-color: var(--box-bg-color);
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    font-size: 100px;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    cursor: pointer;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+button {
+    padding: 19px 109px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    color: #fff;
+    border-color: var(--main-color);
+    font-size: 24px;
+    transition: 200ms transform;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+    margin-top: 10px;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
