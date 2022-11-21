@@ -1,3 +1,4 @@
 # XOX
 
-![XOX](xoxx.PNG)
+###Screenshot
+![XOX](./assets/img/github-xox.PNG)
