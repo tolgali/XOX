@@ -7,13 +7,14 @@
 :root {
     --main-color: #2C82C9;
     --winning-blocks: #2d414b;
-    --bg-color: #25373D;
+    --btn-color: #409C97;
+    --bg-color: #032E46;
     --box-bg-color: #192f36;
     --shadow: rgba(44, 130, 201, .4) 0px 4px 10px 2px;
 }
 
 body {
-    color: var(--main-color);
+    color: #fff;
     font-family: 'Finger Paint', cursive;
 }
 
@@ -32,24 +33,26 @@ h1 {
     align-items: center;
     flex-direction: column;
     background-color: var(--bg-color);
-}
+  
+} 
 
 #title {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 10px;
 }
 #board {
-    width: 300px;
+    width: 360px;
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
     transition: all 2s;
 }
 .box {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,16 +72,16 @@ h1 {
     border-bottom: none;
 } 
 button {
-    padding: 19px 109px;
+    padding: 20px 150px;
     border-radius: 10px;
-    background-color: var(--main-color);
+    background-color: var(--btn-color);
     color: #fff;
     border-color: var(--main-color);
     font-size: 24px;
     transition: 200ms transform;
     font-weight: 600;
     box-shadow: var(--shadow);
-    margin-top: 10px;
+    margin-top: 20px;
 }
 button:hover {
     cursor: pointer;

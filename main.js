@@ -1,14 +1,12 @@
 const title = document.querySelector("#title");
 const btnRestart = document.querySelector("#btn-restart");
-const boxes = Array.from(document.querySelectorAll(".box"));
+const boxes = document.querySelectorAll(".box");
 const board = document.querySelector("#board")
-
 
 const xPlayer = "X";
 const oPlayer = "O";
 let currentPlayer = xPlayer;
 let spaces = Array(9).fill(null);
-
 
 const startGame = () => {
     boxes.forEach(box => box.addEventListener("click", boxClicked))
@@ -21,13 +19,11 @@ function boxClicked(e) {
         spaces[id] = currentPlayer;
         e.target.innerText = currentPlayer;
         
-        if(playerHasWon() !==false){
+        if(playerHasWon()){
             title.innerHTML = `${currentPlayer} has won!`
             board.style.display = "none"
-            return
         } else {
             currentPlayer = currentPlayer == xPlayer ? oPlayer : xPlayer
-
             title.innerText = `${currentPlayer}' Turn !`
         }
     }
@@ -48,8 +44,7 @@ const winningCombos = [
 function playerHasWon() {
     for (const condition of winningCombos) {
         let [a, b, c] = condition
-        
-        console.log(a)
+
         if(spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c])) {
             return 1
         }
